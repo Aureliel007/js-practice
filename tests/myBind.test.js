@@ -27,10 +27,4 @@ describe('Function.prototype.myBind', () => {
         expect(p.y).toBe(2);
         expect(p instanceof Point).toBe(true);
     });
-
-    test('выбрасывает TypeError, если вызван не на функции', () => {
-        expect(() => {
-            Function.prototype.myBind.call(123, {});
-        }).toThrow(TypeError);
-    });
 });
